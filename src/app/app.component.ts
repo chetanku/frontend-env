@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
-
+import { Component } from "@angular/core";
+import { EnvService } from "./env.service";
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  title = 'frontend-env';
+  constructor(private env: EnvService) {}
+  title = this.env.environmentName;
 }

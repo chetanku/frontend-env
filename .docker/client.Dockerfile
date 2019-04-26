@@ -6,15 +6,9 @@
 # Building node from LTS version
 FROM node:11.14.0-alpine as builder
 
-# Installing npm to remove warnings and  optimize the container build process
-# One of many warnings: npm WARN notice [SECURITY] deep-extend has 1 low vulnerability.
-#Go here for more details: https://nodesecurity.io/advisories?search=deep-extend&version=0.5.0 -
-#Run `npm i npm@latest -g` to upgrade your npm version, and then `npm audit` to get more info.
-
 # Copying all necessary files required for npm install
 
 COPY package.json tsconfig.json tslint.json ./
-# COPY cypress ./cypress/
 
 # Install npm dependencies in a different folder to optimize container build process
 

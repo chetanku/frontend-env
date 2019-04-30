@@ -2,7 +2,6 @@
 ### STAGE 1: BUILD ###
 #---------------------
 
-
 # Building node from LTS version
 FROM node:11.14.0-alpine as builder
 
@@ -35,10 +34,6 @@ FROM nginx:latest
 ## Copy defualt nginx configuration file>
 
 COPY .nginx/default.conf /etc/nginx/conf.d
-
-## Remove default nginx website
-
-#RUN rm -rf /usr/share/nginx/html/*
 
 # Copy dist folder from  the builder to nginx public folder(STAGE 1)
 

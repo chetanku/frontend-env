@@ -1,5 +1,9 @@
 Change IMAGE_REGISTRY in .kube/client-kube.yaml to point to your registry
 
+Follow this article:
+
+https://medium.com/@ychetankumarsarma/how-to-manage-angular-application-configurations-for-different-environments-with-docker-and-8ff8c55a1c7d
+
 # FrontendEnv
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
